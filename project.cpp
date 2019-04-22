@@ -203,6 +203,45 @@ while (1)
 
 }
 }
+/*
+
+ * Creating Node
+
+ */
+
+node *single_llist::create_node(int value)
+
+{
+
+    struct node *temp, *s;
+
+    temp = new(struct node);
+
+    if (temp == NULL)
+
+    {
+
+        cout<<"Memory not allocated "<<endl;
+
+        return 0;
+
+    }
+
+    else
+
+    {
+
+        temp->info = value;
+
+        temp->next = NULL;
+
+        return temp;
+
+    }
+
+}
+
+
 
 
 
