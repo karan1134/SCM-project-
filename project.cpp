@@ -934,12 +934,12 @@ int norstack(){
 
 
 int main()
-           {
+          {
              int choice;
              int option=-1;
              while(option)
                {
-                 printf("1.Normal Stack\n2.Normal Queue  \n15.Exit\n");
+                 printf("1.Normal Stack\n2.Normal Queue\n3.Linked List \n4.Exit\n");
                  printf("Enter your choice :- ");
                  scanf("%d",&choice);
                  switch(choice)
@@ -947,6 +947,8 @@ int main()
                    case 1: norstack() ;
                            break;
                    case 2: norqueue();
+                           break;
+                   case 3: ll();
                            break;
                  }
                  fflush(stdin);
