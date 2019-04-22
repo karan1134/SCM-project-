@@ -203,6 +203,130 @@ while (1)
 
 }
 }
+/*
+
+ * Creating Node
+
+ */
+
+node *single_llist::create_node(int value)
+
+{
+
+    struct node *temp, *s;
+
+    temp = new(struct node);
+
+    if (temp == NULL)
+
+    {
+
+        cout<<"Memory not allocated "<<endl;
+
+        return 0;
+
+    }
+
+    else
+
+    {
+
+        temp->info = value;
+
+        temp->next = NULL;
+
+        return temp;
+
+    }
+
+}
+/*
+
+ * Inserting element in beginning
+
+ */
+
+void single_llist::insert_begin()
+
+{
+
+    int value;
+
+    cout<<"Enter the value to be inserted: ";
+
+    cin>>value;
+
+    struct node *temp, *p;
+
+    temp = create_node(value);
+
+    if (start == NULL)
+
+    {
+
+        start = temp;
+
+        start->next = NULL;
+
+    }
+
+    else
+
+    {
+
+        p = start;
+
+        start = temp;
+
+        start->next = p;
+
+    }
+
+    cout<<"Element Inserted at beginning"<<endl;
+
+}
+/*
+
+ * Inserting Node at last
+
+ */
+
+void single_llist::insert_last()
+
+{
+
+    int value;
+
+    cout<<"Enter the value to be inserted: ";
+
+    cin>>value;
+
+    struct node *temp, *s;
+
+    temp = create_node(value);
+
+    s = start;
+
+    while (s->next != NULL)
+
+    {
+
+        s = s->next;
+
+    }
+
+    temp->next = NULL;
+
+    s->next = temp;
+
+    cout<<"Element Inserted at last"<<endl;
+
+}
+
+
+
+
+
 
 
 
