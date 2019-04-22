@@ -4,7 +4,7 @@ using namespace std;
 
 
 int queue[100], n = 100, front = - 1, rear = - 1;
-void Insert() {
+void Insert2() {
    int val;
    if (rear == n - 1)
       cout<<"Queue Overflow"<<endl;
@@ -17,7 +17,7 @@ void Insert() {
       queue[rear] = val;
    }
 }
-void Delete() {
+void Delete2() {
    if (front == - 1 || front > rear) {
       cout<<"Queue Underflow ";
    return ;
@@ -26,7 +26,7 @@ void Delete() {
       front++;;
    }
 }
-void Display() {
+void Display2() {
    if (front == - 1)
    cout<<"Queue is empty"<<endl;
    else {
@@ -46,11 +46,11 @@ do {
    cout<<"Enter your choice : "<<endl;
    cin>>ch;
    switch (ch) {
-      case 1: Insert();
+      case 1: Insert2();
          break;
-      case 2: Delete();
+      case 2: Delete2();
          break;
-      case 3: Display();
+      case 3: Display2();
          break;
       case 4: cout<<"Exit"<<endl;
          break;
@@ -145,7 +145,7 @@ int main()
              int option=-1;
              while(option)
                {
-                 printf("1.Normal Stack\n2.Normal Queue  \n3.Exit\n");
+                 printf("1.Normal Stack\n2.Normal Queue  \n15.Exit\n");
                  printf("Enter your choice :- ");
                  scanf("%d",&choice);
                  switch(choice)
